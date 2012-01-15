@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   creationComplete="creationCompleteHandler(event)"
+					   width="10" height="10"
+					   alwaysInFront="true"
+					   autoExit="false"
+					   showStatusBar="false"
+					   visible="false"
+					   >
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.rpc.http.HTTPService;
+			
+//			private var htmlLoader:HTMLLoader;
+			private var html:SimpleHTMLBox;
+			
+			public function creationCompleteHandler(evt:Event):void {
+				
+				this.nativeWindow.close();
+				
+				html = new SimpleHTMLBox();
+				
+//				htmlBoxContainer.addChild(html);
+				
+			
+				
+//				htmlLoader = new HTMLLoader();
+				
+//				htmlLoader.width = 400;
+//				htmlLoader.height = 400;
+//				var urlRequest:URLRequest = new URLRequest('http://thismight.be');
+//				htmlLoader.addEventListener(Event.COMPLETE, loadingComplete);
+//				htmlLoader.load(urlRequest);
+			}
+			
+//			public function loadingComplete(evt:Event):void{
+//				addElement(htmlLoader);
+//			}
+			
+		]]>
+	</fx:Script>
+	
+	<mx:Canvas id="htmlBoxContainer" width="400" height="400"/>
+
+</s:WindowedApplication>
